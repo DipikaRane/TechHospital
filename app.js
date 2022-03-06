@@ -4,10 +4,10 @@ var dotenv=require('dotenv');
 var mongo=require('mongod');
 var MongoClient=mongo.MongoClient;
 dotenv.config();
-const mongoUrl=process.env.MongoLiveUrl;
+const mongoUrl='mongodb+srv://deepikajoge:LHCdata@cluster0.1uzqt.mongodb.net/data?retryWrites=true&w=majority';
 var cors=require('cors')
 const bodyParser=require('body-parser')
-var port=process.env.PORT||8124;
+var port=process.env.PORT||8125;
 
 var db;
 

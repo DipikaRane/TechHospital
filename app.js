@@ -23,7 +23,7 @@ app.get('/features',(req,res)=>{
       
   })
 
-  app.get('/services',(req,res)=>{
+app.get('/services',(req,res)=>{
     db.collection('medicalservices').find().toArray((err,result)=>{
       if(err) throw err;
       res.send(result)
@@ -41,12 +41,6 @@ app.get('/services/:id',(req,res)=>{
     
 })
 
-//query on basis of cost
-if(req.query.lprice&&req.query.hprice){ 
-  let lprice=Number(req.query.lprice);
-  let hprice=Number(req.query.hprice);
-  query={$and:[{price:{$gt:lprice,$lt:hprice}}],"room_id":id}
-}
 
 db.collection('room').find(query).sort(sort).toArray((err,result)=>{
   if(err) throw err;

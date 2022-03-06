@@ -1,7 +1,7 @@
 var express=require('express');
 var app=express();
 var dotenv=require('dotenv');
-var mongo=require('mongod');
+var mongo=require('mongodb');
 var MongoClient=mongo.MongoClient;
 dotenv.config();
 const mongoUrl='mongodb+srv://deepikajoge:LHCdata@cluster0.1uzqt.mongodb.net/data?retryWrites=true&w=majority';
